@@ -20,6 +20,7 @@ This server is also connected to the [Security Layer](https://github.com/aLucaz/
 - Circuit breaker
 - Feign Client Fallback
 - Retryable configurations
+- Visa API
 
 ## Project achitecture
 
@@ -27,7 +28,29 @@ In progress
 
 ### Project structure
 
-In progress
+```
+main
+├── java
+│   └── pe
+│       └── client
+│           └── custom
+│               └── app
+│                   ├── client
+│                   ├── config
+│                   │   └── properties
+│                   ├── controller
+│                   ├── dto
+│                   ├── exception
+│                   │   └── handler
+│                   ├── model
+│                   ├── service
+│                   │   └── impl
+│                   └── util
+│                       └── constant
+└── resources
+    ├── static
+    └── templates
+```
 
 ## Project documentation
 

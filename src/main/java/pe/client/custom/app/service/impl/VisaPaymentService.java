@@ -14,6 +14,7 @@ import pe.client.custom.app.dto.TransferRequestDto;
 import pe.client.custom.app.dto.TransferResponseDto;
 import pe.client.custom.app.exception.BadRequestException;
 import pe.client.custom.app.exception.InternalServerException;
+import pe.client.custom.app.exception.UnavailableException;
 import pe.client.custom.app.model.Acceptor;
 import pe.client.custom.app.service.BankPaymentService;
 import pe.client.custom.app.util.constant.Format;
@@ -61,7 +62,7 @@ public class VisaPaymentService implements BankPaymentService {
         } catch (FeignException.ServiceUnavailable ex) {
             log.error("Visa API error: service unavailable");
             log.error(ex.getMessage(), ex);
-            throw ex;
+            throw new UnavailableException("Visa API error: not avaiable");
         } catch (FeignException.BadRequest ex) {
             log.error("Visa API error: bad request");
             log.error(ex.getMessage(), ex);

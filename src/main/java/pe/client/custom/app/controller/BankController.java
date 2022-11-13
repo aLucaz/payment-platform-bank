@@ -26,7 +26,7 @@ public class BankController {
         consumes = MediaType.APPLICATION_JSON_VALUE,
         produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public ResponseEntity<Object> transfer(@RequestBody TransferRequestDto request){
+    public ResponseEntity<Object> transfer(@RequestBody TransferRequestDto request) {
         var response = bankPaymentService.transfer(request);
         return ResponseEntity.ok(response);
     }

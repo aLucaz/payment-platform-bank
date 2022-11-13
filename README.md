@@ -54,7 +54,7 @@ main
 
 ## Project documentation
 
-In progress
+![](resources/draw-architecture.png)
 
 ## Running
 

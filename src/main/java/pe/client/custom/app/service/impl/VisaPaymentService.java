@@ -76,7 +76,7 @@ public class VisaPaymentService implements BankPaymentService {
 
     private Map<String, String> getVisaHeaders() {
         Map<String, String> headers = new HashMap<>();
-        headers.put(Header.X_AUTHORIZATION, this.visaAuthorizationToken);
+        headers.put(Header.X_AUTHORIZATION, "Bearer " + this.visaAuthorizationToken);
         headers.put(Header.CONTENT_TYPE, MediaType.APPLICATION_FORM_URLENCODED_VALUE);
         return headers;
     }
